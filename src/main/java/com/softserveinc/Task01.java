@@ -13,7 +13,6 @@ package com.softserveinc;
  */
 public class Task01 {
     public static void main(String[] args) {
-        // TODO: Write your code here
         System.out.println("Starting to make a coffee\n" +
                 "Grinding coffee beans\n" +
                 "Boiling water\n" +
