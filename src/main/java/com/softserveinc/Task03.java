@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Task03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
         System.out.print("Write how many ml of water the coffee machine has:\n >>> ");
         String ingredientwater = scanner.nextLine();
 
@@ -32,15 +31,12 @@ public class Task03 {
 
         int water;
         water = 200;
-        //System.out.print(water * usercups + " ml of water\n");
 
         int milk;
         milk = 50;
-        //System.out.print(milk * usercups + " ml of milk\n");
 
         int coffeebeans;
         coffeebeans = 15;
-        //System.out.print(coffeebeans * usercups + " g of coffee beans");
 
         int leftwater;
         leftwater = (userwater - water) / water;
@@ -51,7 +47,6 @@ public class Task03 {
 
         int availablecups;
         availablecups = Math.min(leftwater, Math.min(leftmilk,leftbeans));
-
 
         if (availablecups == usercups) {
             System.out.print("Yes, I can make that amount of coffee\n");
