@@ -29,31 +29,31 @@ public class Task03 {
         int userbeans;
         userbeans = Integer.parseInt(ingredientbeans);
 
-        int water;
-        water = 200;
+//        int water;
+//        water = 200;
+//
+//        int milk;
+//        milk = 50;
+//
+//        int coffeebeans;
+//        coffeebeans = 15;
+//
+//        int leftwater;
+//        leftwater = (userwater - water) / water;
+//        int leftmilk;
+//        leftmilk = (usermilk - milk) / milk;
+//        int leftbeans;
+//        leftbeans = (userbeans - coffeebeans) / coffeebeans;
 
-        int milk;
-        milk = 50;
-
-        int coffeebeans;
-        coffeebeans = 15;
-
-        int leftwater;
-        leftwater = (userwater - water) / water;
-        int leftmilk;
-        leftmilk = (usermilk - milk) / milk;
-        int leftbeans;
-        leftbeans = (userbeans - coffeebeans) / coffeebeans;
-
-        int availablecups;
-        availablecups = Math.min(leftwater, Math.min(leftmilk,leftbeans));
+        int availablecups = Math.min(userwater/200, usermilk/50);
+        availablecups = Math.min(availablecups, userbeans/15);
 
         if (availablecups == usercups) {
             System.out.print("Yes, I can make that amount of coffee\n");
-        }  else if (userwater < water || usermilk < milk || userbeans < coffeebeans) {
+        }  else if (availablecups < usercups) {
            System.out.print("No, I can make only " + availablecups + " cup(s) of coffee\n");
-       } else {
-           System.out.print("Yes, I can make that amount of coffee (and even " + availablecups + " more than that)\n");
+        }  else if (availablecups > usercups) {
+           System.out.printf("Yes, I can make that amount of coffee (and even %d more than that)%n", availablecups - usercups);
        }
 
 
