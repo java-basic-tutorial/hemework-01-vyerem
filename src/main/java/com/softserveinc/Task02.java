@@ -33,7 +33,25 @@ import java.util.Scanner;
 public class Task02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
+        System.out.print("Write how many cups of coffee you will need:\n >>> ");
+        String cups = scanner.nextLine();
+        System.out.println("For " + cups + " cups of coffee you will need:");
+
+        int usercups;
+        usercups = Integer.parseInt(cups);
+
+        int water;
+        water = 200;
+        System.out.print(water * usercups + " ml of water\n");
+
+        int milk;
+        milk = 50;
+        System.out.print(milk * usercups + " ml of milk\n");
+
+        int coffeebeans;
+        coffeebeans = 15;
+        System.out.print(coffeebeans * usercups + " g of coffee beans");
+
 
     }
 }
